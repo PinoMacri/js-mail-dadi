@@ -49,29 +49,25 @@ controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
 */
 
-
 const email = ["carlo@hotmail.it", "giovanni@hotmail.it", "pietro@hotmail.it", "paolo@hotmail.it"]
 
-
 controllo.addEventListener("click", function () {
-
-
     let inserimento = document.getElementById("inserimento")
     let definitive = inserimento.value
     const controllo = document.getElementById("controllo")
     const risultatoForm = document.getElementById("risultatoForm")
 
     if (definitive === email[0] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
     }
     else if (definitive === email[1] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
     }
     else if (definitive === email[2] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
     }
     else if (definitive === email[3] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
     }
     else  {
         risultatoForm.innerText = "Ci dispiace, la tua email sembra che non faccia parte della lista!"

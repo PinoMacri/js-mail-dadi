@@ -1,7 +1,43 @@
-div {
-    border: 1px dashed black;
+body {
+        background: linear-gradient(-45deg, red , orange , yellow , green , blue , violet);
+        background-size: 400% 400%;
+        background-repeat: no-repeat;
+        animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+h1  {
+    font-size: 90px;
+    font-family: 'Rubik Gemstones', cursive;
+    color: black;
 }
-#contenitore {
-    display: flex;
-    flex-wrap: wrap;
+h2 {
+    font-family: 'Rubik Gemstones', cursive;
+    color: black;
+    font-size: 50px;
+   
 }
+p , div {
+    font-size: 50px;
+    font-family: 'Amita', cursive;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(255, 247, 247), 0 0 1em rgb(247, 0, 255), 0 0 0.2em red;
+}
+h3 {text-shadow: 1px 1px 2px rgb(255, 247, 247), 0 0 1em rgb(247, 0, 255), 0 0 0.2em red;}
+button {
+    border-radius: 50px;
+    padding: 20px;
+    background-image: linear-gradient(to left , red , orange , yellow , green , blue, violet);
+    text-shadow: 1px 1px 2px rgb(255, 247, 247), 0 0 1em rgb(247, 0, 255), 0 0 0.2em red;
+}
+    
