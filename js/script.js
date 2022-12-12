@@ -50,27 +50,29 @@ stampa un messaggio appropriato sull’esito del controllo.
 */
 
 const email = ["carlo@hotmail.it", "giovanni@hotmail.it", "pietro@hotmail.it", "paolo@hotmail.it"]
+const controllo = document.getElementById("controllo")
+const risultatoForm = document.getElementById("risultatoForm")
+console.log(email)
+
+
+
 
 controllo.addEventListener("click", function () {
+    risultatoForm.innerText = " "
+
     let inserimento = document.getElementById("inserimento")
     let definitive = inserimento.value
-    const controllo = document.getElementById("controllo")
-    const risultatoForm = document.getElementById("risultatoForm")
 
-    if (definitive === email[0] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
+    for (let i = 0; i < email.length; i++) {
+        if (definitive === email[i]) {
+            risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
+            break
+        }
+        else {
+        risultatoForm.innerText="Ci dispiace, la tua email sembra che non faccia parte della lista!"
+        }
+
     }
-    else if (definitive === email[1] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
-    }
-    else if (definitive === email[2] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
-    }
-    else if (definitive === email[3] ) {
-        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere al magico mondo di Boolean!"
-    }
-    else  {
-        risultatoForm.innerText = "Ci dispiace, la tua email sembra che non faccia parte della lista!"
-    }
+    
 
 })
