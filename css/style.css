@@ -1,0 +1,7 @@
+div {
+    border: 1px dashed black;
+}
+#contenitore {
+    display: flex;
+    flex-wrap: wrap;
+}
