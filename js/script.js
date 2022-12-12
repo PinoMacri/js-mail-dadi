@@ -1,3 +1,4 @@
+//^ -------------------------------------------ESERCIZIO 1-----------------------------------------------------------
 /*
 ESERCIZIO 1 - Gioco dei dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
@@ -25,14 +26,55 @@ gioca.addEventListener("click", function () {
             const max = 6;
             let resultDue = Math.floor(random * (max + 1 - min)) + min;
             computer.innerText = resultDue
-        
-        if (result > resultDue) {
-            risultato.innerText = "Hai Vinto la partita !!!!"
+
+            if (result > resultDue) {
+                risultato.innerText = "Hai Vinto la partita !!!!"
+            }
+            else if (resultDue > result) {
+                risultato.innerText = "Ritenta, sarai più fortunato la prossima volta !!!!"
+            }
+            else if (result = resultDue) {
+                risultato.innerText = "Che coincidenza incredibile, Pareggio !!!!"
+            }
         }
-        else {
-            risultato.innerText = "Ritenta, sarai più fortunato la prossima volta !!!!"
-        }
-    }
     }
 }
 )
+//^ -------------------------------------------ESERCIZIO 2-----------------------------------------------------------
+/*
+ESERCIZIO 2 - Finta Login
+Inventa una lista di email autorizzate
+Chiedi all’utente la sua email, con un piccolo form.
+controlla che sia nella lista di chi può accedere,
+stampa un messaggio appropriato sull’esito del controllo.
+*/
+
+
+const email = ["carlo@hotmail.it", "giovanni@hotmail.it", "pietro@hotmail.it", "paolo@hotmail.it"]
+
+
+controllo.addEventListener("click", function () {
+
+
+    let inserimento = document.getElementById("inserimento")
+    let definitive = inserimento.value
+    const controllo = document.getElementById("controllo")
+    const risultatoForm = document.getElementById("risultatoForm")
+
+    if (definitive === email[0] ) {
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+    }
+    else if (definitive === email[1] ) {
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+    }
+    else if (definitive === email[2] ) {
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+    }
+    else if (definitive === email[3] ) {
+        risultatoForm.innerText = "Complimenti, la tua email ha superato il controllo e può accedere ai nostri sistemi!"
+    }
+    else  {
+        risultatoForm.innerText = "Ci dispiace, la tua email sembra che non faccia parte della lista!"
+    }
+
+})
